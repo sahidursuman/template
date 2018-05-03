@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Users", type: :feature do
+RSpec.feature "User Features", type: :feature do
   #pending "add some scenarios (or delete) #{__FILE__}"
 
   context 'create new user' do
