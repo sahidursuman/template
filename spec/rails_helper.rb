@@ -3,7 +3,14 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
-require 'capybara/rspec'
+
+# After installing gem 'capybara', we need to add this
+require 'capybara/rails'
+
+# After installing gem 'factory_bo_rails', we need to add this
+#require 'support/factory_bot'
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f } #require 'support/factory_bot'
+
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
