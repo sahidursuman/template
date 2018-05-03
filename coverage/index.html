@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-03T15:15:59+06:00">2018-05-03T15:15:59+06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-03T15:22:13+06:00">2018-05-03T15:22:13+06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>23</b> files in total.
-    <b>173</b> relevant lines. 
-    <span class="green"><b>173</b> lines covered</span> and
+    <b>175</b> relevant lines. 
+    <span class="green"><b>175</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -253,9 +253,9 @@
       <tr>
         <td class="strong"><a href="#af45609989c14f559f1b19ff5e3937d37b1a5aaf" class="src_link" title="spec/features/users_spec.rb">spec/features/users_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>113</td>
-        <td>38</td>
-        <td>38</td>
+        <td>115</td>
+        <td>39</td>
+        <td>39</td>
         <td>0</td>
         <td>1.2</td>
       </tr>
@@ -274,8 +274,8 @@
         <td class="strong"><a href="#1cacfef2839ee5ddbe3cfc6b295735d3a09dc186" class="src_link" title="spec/rails_helper.rb">spec/rails_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>90</td>
-        <td>12</td>
-        <td>12</td>
+        <td>13</td>
+        <td>13</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -2325,8 +2325,8 @@
     <h3>spec/features/users_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>38</b> relevant lines. 
-      <span class="green"><b>38</b> lines covered</span> and
+      <b>39</b> relevant lines. 
+      <span class="green"><b>39</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2781,7 +2781,7 @@
         <li class="covered" data-hits="3" data-linenumber="75">
           <span class="hits">3</span>
           
-          <code class="ruby">    let!(:user) { User.create(first_name: &#39;John&#39;, last_name: &#39;Doe&#39;, email: &#39;john.doe@example.com&#39;) }</code>
+          <code class="ruby">    let!(:user) {User.create(first_name: &#39;John&#39;, last_name: &#39;Doe&#39;, email: &#39;john.doe@example.com&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="76">
@@ -2949,19 +2949,19 @@
         <li class="covered" data-hits="1" data-linenumber="103">
           <span class="hits">1</span>
           
-          <code class="ruby">      scenario &#39;should be successfull&#39; do</code>
+          <code class="ruby">    scenario &#39;should be successfull&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="104">
           <span class="hits">1</span>
           
-          <code class="ruby">        user = User.create(first_name: &#39;John&#39;, last_name: &#39;Doe&#39;, email: &#39;john.doe@example.com&#39;)</code>
+          <code class="ruby">      user = User.create(first_name: &#39;John&#39;, last_name: &#39;Doe&#39;, email: &#39;john.doe@example.com&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="105">
           <span class="hits">1</span>
           
-          <code class="ruby">        visit users_path</code>
+          <code class="ruby">      visit users_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="106">
@@ -2973,19 +2973,19 @@
         <li class="never" data-hits="" data-linenumber="107">
           
           
-          <code class="ruby">        #click_link &#39;Destroy&#39;</code>
+          <code class="ruby">      #click_link &#39;Destroy&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="108">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="108">
+          <span class="hits">1</span>
           
-          <code class="ruby">        expect { click_link &#39;Destroy&#39; }.to change(User, :count).by(-1)</code>
+          <code class="ruby">      accept_confirm do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="109">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(page).to have_content(&#39;User was successfully destroyed.&#39;)</code>
+          <code class="ruby">        click_link &#39;Destroy&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="110">
@@ -2994,19 +2994,31 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="111">
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      expect(page).to have_content(&#39;User was successfully destroyed.&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="112">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
           
           
           <code class="ruby">end</code>
@@ -3335,8 +3347,8 @@
     <h3>spec/rails_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>13</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3476,10 +3488,10 @@
           <code class="ruby"># Capybara.default_driver = :selenium_chrome</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#Capybara.default_driver = :selenium_chrome_headless</code>
+          <code class="ruby">Capybara.default_driver = :selenium_chrome_headless</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">

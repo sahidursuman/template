@@ -72,7 +72,7 @@ RSpec.feature "Users", type: :feature do
 
   # With Refactored
   context 'update user' do
-    let!(:user) { User.create(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com') }
+    let!(:user) {User.create(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com')}
     before(:each) do
       visit edit_user_path(user)
     end
@@ -100,14 +100,16 @@ RSpec.feature "Users", type: :feature do
   end
 
   context 'destroy user' do
-      scenario 'should be successfull' do
-        user = User.create(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com')
-        visit users_path
+    scenario 'should be successfull' do
+      user = User.create(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com')
+      visit users_path
 
-        #click_link 'Destroy'
-        expect { click_link 'Destroy' }.to change(User, :count).by(-1)
-        expect(page).to have_content('User was successfully destroyed.')
+      #click_link 'Destroy'
+      accept_confirm do
+        click_link 'Destroy'
       end
+      expect(page).to have_content('User was successfully destroyed.')
+    end
 
   end
 end
