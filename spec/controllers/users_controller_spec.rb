@@ -13,7 +13,7 @@ RSpec.describe UsersController, type: :controller do
 
   context 'GET #show' do
     it 'returns a success response' do
-      user = User.create!(first_name: 'First', last_name: 'Last', email: 'sample@example.com')
+      user = User.create!(first_name: 'First', last_name: 'Last', username: 'john', email: 'sample@example.com')
       get :show, params: {id: user.to_param}
       #expect(:response).to be_success
       response.success?

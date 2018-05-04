@@ -10,6 +10,7 @@ RSpec.feature "User Features", type: :feature do
       within('form') do # within('#form-id') do or within('.form-class') do
         fill_in 'First name', with: 'john'
         fill_in 'Last name', with: 'doe'
+        fill_in 'Username', with: 'john'
       end
     end
 
@@ -72,7 +73,7 @@ RSpec.feature "User Features", type: :feature do
 
   # With Refactored
   context 'update user' do
-    let!(:user) {User.create(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com')}
+    let!(:user) {User.create(first_name: 'John', last_name: 'Doe', username: 'john', email: 'john.doe@example.com')}
     before(:each) do
       visit edit_user_path(user)
     end
@@ -101,7 +102,7 @@ RSpec.feature "User Features", type: :feature do
 
   context 'destroy user' do
     scenario 'should be successfull' do
-      user = User.create(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com')
+      user = User.create(first_name: 'John', last_name: 'Doe', username: 'john', email: 'john.doe@example.com')
       visit users_path
 
       #click_link 'Destroy'

@@ -21,6 +21,11 @@ RSpec.describe User, type: :model do
       expect(user.save).to eq(false)
     end
 
+    it "ensures username presence" do
+      user.username = nil
+      expect(user.save).to eq(false)
+    end
+
     it 'ensures email presence' do
       #user = User.new(first_name: 'First', last_name: 'Last').save
       user.email = nil
